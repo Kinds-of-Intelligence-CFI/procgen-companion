@@ -213,11 +213,11 @@ class ArenaConfig(CustomMappingTag, AnimalAITag, WithId, WithTemplateMeta):
 
 class Arena(CustomMappingTag, AnimalAITag, WithId):
     tag: str = "Arena"
-    order = ["pass_mark", "t", "items"]
+    order = ["passMark", "timeLimit", "items"]
     id: Optional[str]
 
-    pass_mark: Any
-    t: Any
+    passMark: Any
+    timeLimit: Any
     items: Any
 
 

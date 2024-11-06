@@ -3,8 +3,8 @@ arenas:
   0: !Arena
     # We don't want to vary these fields,
     # so we keep them as is.
-    pass_mark: 0
-    t: 250
+    passMark: 0
+    timeLimit: 250
     items:
       - !Item
         name: Agent
