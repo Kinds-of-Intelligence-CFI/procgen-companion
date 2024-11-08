@@ -6,7 +6,7 @@ Specify task templates and procedurally generate all possible variations.
 
 ## Install
 
-`pip install git+https://github.com/wschella/procgen-companion.git`
+`pip install git+[https://github.com/wschella/procgen-companion.git](https://github.com/Kinds-of-Intelligence-CFI/procgen-companion.git)` 
 
 or if you already installed it, maybe safer to like this:
 
