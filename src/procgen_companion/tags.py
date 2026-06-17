@@ -203,27 +203,60 @@ class CustomScalarTag(CustomTag):
 class ArenaConfig(CustomMappingTag, AnimalAITag, WithId, WithTemplateMeta):
     # Optional meta information that will not be printed
     tag: str = "ArenaConfig"
-    order: list[str] = ["arenas"]
+    order: list[str] = [
+        "randomizeArenas",
+        "canResetEpisode",
+        "canChangePerspective",
+        "showNotification",
+        "arenas",
+    ]
     proc_meta: Optional[dict[str, Any]]
     id: Optional[str]
 
     # Actual fields
+    randomizeArenas: Any
+    canResetEpisode: Any
+    canChangePerspective: Any
+    showNotification: Any
     arenas: dict[int, Arena] = {}
 
 
 class Arena(CustomMappingTag, AnimalAITag, WithId):
     tag: str = "Arena"
-    order = ["passMark", "timeLimit", "items"]
+    order = ["passMark", "timeLimit", "items", "blackouts", "mergeNextArena"]
     id: Optional[str]
 
     passMark: Any
     timeLimit: Any
     items: Any
+    blackouts: Any
+    mergeNextArena: Any
 
 
 class Item(CustomMappingTag, AnimalAITag, WithId):
     tag: str = "Item"
-    order = ["name", "positions", "rotations", "colors", "sizes"]
+    order = [
+        "name",
+        "positions",
+        "rotations",
+        "sizes",
+        "colors",
+        "skins",
+        "symbolNames",
+        "initialValues",
+        "finalValues",
+        "delays",
+        "changeRates",
+        "moveDurations",
+        "resetDurations",
+        "rewardNames",
+        "rewardWeights",
+        "spawnProbability",
+        "maxRewardCounts",
+        "rewardSpawnPos",
+        "spawnedRewardSize",
+        "frozenAgentDelays",
+    ]
     id: Optional[str]
 
     name: str
@@ -231,7 +264,21 @@ class Item(CustomMappingTag, AnimalAITag, WithId):
     rotations: Any
     colors: Any
     sizes: Any
+    skins: Any
     symbolNames: Any
+    initialValues: Any
+    finalValues: Any
+    delays: Any
+    changeRates: Any
+    moveDurations: Any
+    resetDurations: Any
+    rewardNames: Any
+    rewardWeights: Any
+    spawnProbability: Any
+    maxRewardCounts: Any
+    rewardSpawnPos: Any
+    spawnedRewardSize: Any
+    frozenAgentDelays: Any
 
 
 class Vector3(CustomMappingTag, AnimalAITag, WithId):
